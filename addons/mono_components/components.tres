@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EditorComponents" format=3 uid="uid://bhmu5728pnw6o"]
+
+[ext_resource type="Script" uid="uid://dfbpicwfdqufj" path="res://addons/mono_components/EditorComponentAssignment.cs" id="1_563xr"]
+[ext_resource type="Script" uid="uid://bqtjx44g6cwkb" path="res://addons/mono_components/EditorComponents.cs" id="2_2aclg"]
+
+[sub_resource type="Resource" id="Resource_563xr"]
+script = ExtResource("1_563xr")
+ComponentName = "MyCoolGame.TestComponent"
+Exports = Dictionary[String, Variant]({
+"Speed": 15.0
+})
+
+[resource]
+script = ExtResource("2_2aclg")
+Assignments = Dictionary[String, Dictionary]({
+"res://main.tscn": Dictionary[NodePath, Array]({
+NodePath("Node2D/TestGameNode"): Array[ExtResource("1_563xr")]([SubResource("Resource_563xr")])
+})
+})
